@@ -1,0 +1,37 @@
+{
+
+    "medicalproducts":[
+      {
+       
+        "img2":"https://www.netmeds.com/images/product-v1/150x150/1140784/medisynth_gasgan_eazy_sugar_free_syrup_450_ml_750475_0_0.jpg",
+        "title":"CETAPHIL SUN SPF 50+ UVB/UVA VERY HIGH PROTECTION LIGHT Gel 50ml",
+        "price":"$1099.26"
+      },
+     {
+        
+        "img2":"https://www.netmeds.com/images/product-v1/150x150/929475/cetaphil_sun_spf_50_uvb_uva_very_high_protection_light_gel_50ml_149854_0_5.jpg",
+        "title":"La Pink Vitamin C White Haldi Face Toner Serum 50 ml",
+        "price":"$877.00"
+      },
+      {
+       
+        "img2":"https://www.netmeds.com/images/product-v1/600x600/113653/revital_h_capsule_men_60s_757936_0_0.jpg",
+        "title":"Accu-Chek Active Glucose Monitor with Free 10 Test Strips",
+        "price":"$1800.00"
+      },
+      {
+
+        "img2":"https://www.netmeds.com/images/product-v1/150x150/1135910/la_pink_vitamin_c_white_haldi_face_mask_100_gm_741176_0_0.jpg",
+        "title":"Cetaphil Gentle Skin Cleanser For Dry to Normal - Sensitive Skin 125 ml",
+        "price":"$1284.00"
+
+      },
+      {
+    
+        "img2":"https://www.netmeds.com/images/product-v1/150x150/885975/ensure_nutritional_powder_vanilla_flavour_1_kg_refill_pack_80965_0_3.jpg",
+        "title":"La Pink Vitamin C White Haldi Face Mask 100 gm",
+        "price":"$1804.00"
+
+      }
+    ]
+}

@@ -1,0 +1,22 @@
+
+<table class=" table table-bordered">
+  <tr style="background-color: aquamarine;">
+  <th>Product Name</th>
+  <th>Product Image</th>
+  <th>Product Price</th>
+  <th>Action</th></tr>
+
+  <tr *ngFor="let item of data; let i = index">
+    <td>{{item.title}}</td>
+    <td><img [src]="item.img2" alt="Image {{i}}"  height="200px" width="200px"></td>
+    <td>{{item.price}}</td>
+   <td><button class="btn btn-danger" (click)="removeImage(i)">Delete</button></td>
+    
+  </tr>
+</table>
+
+<button class="btn btn-warning" (click)="cshopping()">Book Your Appointment</button>
+
+
+
+

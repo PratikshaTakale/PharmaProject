@@ -1,0 +1,91 @@
+
+<div class="container">
+    <h4>Appointment Form</h4>
+
+    <form [formGroup]="empform" (ngSubmit)="onSubmit()">
+
+        <div class="form-group" >
+            <label for="id" >Id</label>
+            <input type="text" class="form-control" formControlName="id">
+        </div><br>
+
+        <div class="form-group">
+            <label for="fname">First Name :</label>
+            <input type="text" class="form-control" formControlName="fname"
+            required [ngClass]="{'is-invalid':isFormSubmit && f.fname.errors}">
+
+            <div *ngIf="isFormSubmit && f.fname.errors?.required" class="invalid-feedback">
+                first name is required.
+            </div>
+        </div><br>
+
+        <div class="form-group">
+            <label for="lname">Last Name :</label>
+            <input type="text" class="form-control" formControlName="lname"
+            required [ngClass]="{'is-invalid': isFormSubmit && f.lname.errors}">
+            <div *ngIf="isFormSubmit && f.lname.errors?.required" class="invalid-feedback">
+                Last Name is required.
+            </div>
+        </div><br>
+        
+        <div class="form-group">
+            <label for="email">Email :</label>
+                <input type="email" class="form-control" formControlName="email"
+                required [ngClass]="{'is-invalid' : isFormSubmit && f.email.errors}">
+               
+                <div *ngIf="isFormSubmit && f.email.errors?.required" class="invalid-feedback">
+                    email is required.
+                </div>
+                <div *ngIf="isFormSubmit && f.email.errors?.pattern" class="invalid-feedback">
+                    enter proper email address.
+                </div>
+            </div><br>
+
+            <div class="form-group">
+                <label for="phno">Phone Number :</label>
+                <input type="number" class="form-control" formControlName="phno">
+                
+            </div><br>
+
+            <div class="form-group">
+                <label for="gender">Gender :</label><br>
+                <input type="radio" value="male" formControlName="gender">
+                <label for="male">Male</label><br>
+                <input type="radio" value="female" formControlName="gender">
+                <label for="female">Female</label><br>
+            </div><br>
+
+            <div class="form-group">
+                <label for="date">Please Enter Appointment Date:</label>
+                <input type="date" name="date" formControlName="date" class="form-control">
+
+            </div><br>
+            
+            <div class="form-group">
+                <label for="pass">Comments & Request :</label>
+                <input type="text" class="form-control" [style.width.px]="1300" [style.height.px]="100" formControlName="pass">
+            </div><br>   
+        <div class="form-group">
+            <button class="btn btn-warning">Submit</button>
+        </div>
+    </form>
+</div><br>
+<div class="container">
+    <table class="table table-bordered">
+        <tr>
+            <th *ngFor="let th of theader">{{th}}</th>
+            <th>Date</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let dt of submitteddata">
+            <td>{{dt.fname}}</td>
+            <td>{{dt.lname}}</td>
+            <td>{{dt.email}}</td>
+            <td>{{dt.phno}}</td>
+            <td>{{dt.gender}}</td>
+          <td>{{dt.pass}}</td>
+          <td>{{dt.date}}</td><br>
+            <td><button class="btn btn-danger" (click)="ondelete(dt)">Delete</button></td>
+        </tr>
+    </table>
+</div>
